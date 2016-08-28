@@ -9,12 +9,14 @@ items from the application after the user logs into the application.
 ##Data##
 *Python*<br>
 \
+<br>
 application.py - Flask application containing the logic for sport store application
 database_setup.py - Database tables used to store items from sports store application
 catalogwithusers.py - Populates the database with categories, catalog items and users
 
 *HTML*<br>
 \templates\
+<br>
 main.html - Loads required libraries to view application.
 header.html - HTML for navigation bar.
 catalog.html - Main home page for item catalog.
@@ -30,20 +32,22 @@ edititem.html - Page where users edit items they created from the database.
 
 *STATIC*<br>
 \static\
+<br>
 sports.jpg - background image for web site.
 styles.css - CSS controlling the styles for the elements within the application.
 
 
 
 ##RUNNING APPLICATION##
-*Start by running the database_setup.py file with the command python database_setup.py.<br>
-*Once that completes you should see a file catalogwithusers.db<br>
-*Run the following command python catalog_items.py.  This creates the data in the .DB file.<br>
-*Run the following command python application.py.  You should see a message stating:<br>
-*"Running on http://0.0.0.0:8000/"<br>
-*"Restarting with reloader"<br>
-*In your browser navigate to http://localhost:8000 and you should be able to view the application.
-
+<ul>
+<li> Start by running the database_setup.py file with the command python database_setup.py.<br>
+<li> Once that completes you should see a file catalogwithusers.db<br>
+<li> Run the following command python catalog_items.py.  This creates the data in the .DB file.<br>
+<li> Run the following command python application.py.  You should see a message stating:<br>
+<li> Running on http://0.0.0.0:8000/"<br>
+<li> "Restarting with reloader"<br>
+<li> In your browser navigate to http://localhost:8000 and you should be able to view the application.
+</ul>
 
 ##JSON##
 *There are a few paths the user can navigate to, to get a JSON output of the data:
