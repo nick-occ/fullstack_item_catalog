@@ -50,10 +50,12 @@ styles.css - CSS controlling the styles for the elements within the application.
 </ul>
 
 ##JSON##
-*There are a few paths the user can navigate to, to get a JSON output of the data:
-'/categories/json' - Gets a JSON listing of all the categories.
-'/items/<int:category_id>/json' - Gets a JSON listing of all the items for a specific category.
-'/itemsall/json' - Gets a JSON listing for all items in the catalog.
+There are a few paths the user can navigate to, to get a JSON output of the data:
+<ul>
+<li> '/categories/json' - Gets a JSON listing of all the categories.
+<li> '/items/<int:category_id>/json' - Gets a JSON listing of all the items for a specific category.
+<li> '/itemsall/json' - Gets a JSON listing for all items in the catalog.
+</ul>
 
 ##CREDITS##
 Image obtained from:
