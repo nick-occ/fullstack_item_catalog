@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row top-menu">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 float-right"></div>
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+<section id="intro-header">
+	<div class="container col-md-6 col-md-push-3">
+		<form action="#" method="post">
+			<div class="displayPanel panel panel-default">
+				<div class="displayPanelHeading panel-heading">
+					<h1> Add Item </h1>
+				</div>
+	  			<div class="panel-body">
+					<div class="form-group">
+					<label for="name">Name: </label> 
+					<input type="text" name="name" maxlength="250" class="form-control" placeholder="Enter name of item" required/>
+					<br>
+					<label for="description">Description: </label> 
+					<textarea name="description" class="form-control" rows='3' placeholder='Enter description of item' required></textarea>
+					<br>
+					<label for="category">Category: </label> 
+					<select name="category" id="category">
+					{% for c in categories %}
+						<option id="{{c.id}}">{{c.name}}</option>
+					{% endfor %}
+					</select>
+				    <br><br>
+				    <button type="submit" class="btn btn-primary" id="submit" type="submit">
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create
+					</button>	
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default" style="background-color:dodgerblue;margin-bottom:0px;border-radius:0px;border-top-width:0px">
+		<div class="navbar-header">
+			<a class="" href='{{url_for('showCategories')}}'>
+				<h1 style="color:white;margin-left:10px;">
+					Online Sports Catalog
+				</h1>
+			</a>
+		</div>
+
+		<div class="btn-group pull-right">
+			<h5 style="margin-right:10px;">
+					{%if 'username' not in session %}
+					<a style="color:white;" href="{{url_for('showLogin')}}">Login </a>
+					<span style="color:white;" class="glyphicon glyphicon-ok"/>
+					{% else %}
+					<a style="color:white;" href="{{url_for('disconnect')}}">Disconnect </a>
+					<span style="color:white;" class="glyphicon glyphicon-off"/>
+					{% endif %}
+		
+			</h5>
+		</div>
+	</div>
+</nav>

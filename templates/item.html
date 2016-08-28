@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+
+
+<section id="intro-header">
+<div class="container">
+	<div class="displayPanel panel panel-default col-md-6 col-md-push-3">
+		<div class="displayPanelHeading panel-heading">
+			<div class="row">
+					<div class="pull-right" style="margin:10px;">
+						<a href = "{{url_for('addItem')}}"><span class="glyphicon glyphicon-plus"></span>Add&nbspItem</a>
+					</div>
+			</div>
+      		<h1>{{item[0].name}}</h1>
+  		</div>
+  		<div class="panel-body">
+			<p class="">{{item[0].description}}</p>
+			<div>
+				<br>
+				<a href="{{url_for('editItem',item_id = item[0].id)}}"><span class="glyphicon glyphicon-pencil"></span> Edit</a> | <a href = "{{url_for('deleteItem',item_id = item[0].id)}}"><span class="glyphicon glyphicon-remove"></span> Delete</a>
+			</div>
+	
+		</div>
+	</div>
+</div>
+</section>
+{% endblock %}

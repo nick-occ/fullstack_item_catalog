@@ -1,0 +1,66 @@
+.panel-default>.panel-heading{
+	background-color:white;
+}
+
+.displayPanel{
+	margin:20px;
+}
+
+.displayPanelHeading{
+	background-color:white;
+}
+
+.displayPanelHeading h1{
+	color:dodgerblue;
+}
+
+.displayPanelBody{
+	margin:10px;
+}
+
+section#intro-header {
+	background-image: url(../static/sports.jpg);
+	background-size: cover;
+	height:100vh;
+}
+
+section#intro-header .wrap-headline {
+	position: relative;
+	padding-top: 0%;
+	padding-bottom: 0%;
+}
+
+section#intro-header h2 {
+	font-size: 1.5rem;
+}
+
+section#intro-header hr {
+	width: 10%;
+}
+
+section#intro-header .btn-default {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+}
+
+.catPanel {
+	margin-top:10%;	
+}
+
+.flash {
+	background-color: #98FB98;
+	width:100%;
+	text-decoration: none;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+
+}
+
+.container-fluid{
+	padding:0px;
+}
+

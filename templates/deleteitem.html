@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+
+<section id="intro-header">
+<div class=container>
+	<div class="displayPanel panel panel-default">
+		<div class="displayPanelHeading panel-heading">
+			<div class="row text-center">
+				<h1> Delete Item </h1>
+			</div>
+		</div>
+		
+	  	<div class="displayPanelBody panel-body">
+			<div class="row text-center">
+				<h2 style="color:red;" class="text-danger"> Are you sure you want to delete this item {{item_id}}? </h2>
+			</div>	
+
+			<div class="row">
+				<div class="col-md-1 col-md-push-5 col-sm-2 col-sm-push-4 col-xs-4">
+					<form name="delete" action="#" method = 'post' >
+						<button type="submit" class="btn btn-danger delete" id="submit" type="submit">
+						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</button>
+					</form>
+				</div>
+
+
+				<div class="col-md-1 col-md-push-5 col-sm-2 col-sm-push-4 col-xs-4 col-xs-push-1">
+					<a href = '{{url_for("showItem", item_id = item.id)}}'>
+					<button class="btn btn-primary">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+{% endblock %}
